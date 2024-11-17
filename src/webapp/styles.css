@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ddd;
+}
+
+.container {
+    background-color: #fff;
+    width: 760px;
+    max-width: 100vw;
+    height: 480px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.forms-container {
+    position: relative;
+    width: 50%;
+    text-align: center;
+}
+
+.form-control {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 480px;
+    transition: all 0.5s ease-in;
+}
+
+.form-control h2 {
+    font-size: 2rem;
+}
+
+.form-control form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 30px;
+}
+
+.form-control form input {
+    margin: 10px 0;
+    border: none;
+    padding: 15px;
+    background-color: #efefef;
+    border-radius: 5px;
+}
+
+.form-control form button {
+    border: none;
+    padding: 20px;
+    margin-top: 5px;
+    background-color: #059669;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.form-control form button:focus {
+    outline: none;
+}
+
+.intros-container {
+    position: relative;
+    left: 50%;
+    width: 50%;
+    text-align: center;
+}
+
+.intro-control {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 480px;
+    color: #fff;
+    background: linear-gradient(170deg, #34d399, #059669);
+    transition: all 0.5s ease-in;
+}
+
+.intro-control button {
+    border: none;
+    padding: 15px 30px;
+    background-color: #10b981;
+    border-radius: 50px;
+    color: #fff;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.intro-control.signin-intro {
+    opacity: 1;
+}
+
+.intro-control.signup-intro {
+    opacity: 0;
+}
+
+.change .form-control.signup-form {
+    opacity: 1;
+    z-index: 2;
+    transform: translateX(-100%);
+}
+
+.change .form-control.signin-form {
+    opacity: 0;
+    z-index: 1;
+}
+
+.change .intros-container .intro-control {
+    transform: translateX(-100%);
+}
+
+.change .intros-container .intro-control.signup-intro {
+    opacity: 1;
+    z-index: 2;
+}
+
+.change .intros-container .intro-control.signin-intro {
+    opacity: 0;
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .forms-container {
+        order: 2;
+        width: 100%;
+        height: 50vh;
+    }
+    .intros-container {
+        order: 1;
+        width: 100%;
+        left: 0;
+        height: 40vh;
+    }
+}

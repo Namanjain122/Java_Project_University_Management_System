@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Management System - Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+</head>
+<body>
+<div class="container">
+    <div class="forms-container">
+        <div class="form-control signup-form">
+            <form action="signupServlet" method="POST">
+                <h2>Signup</h2>
+                <input type="text" name="username" placeholder="Username" required />
+                <input type="email" name="email" placeholder="Email" required />
+                <input type="password" name="password" placeholder="Password" required />
+                <input type="password" name="confirmPassword" placeholder="Confirm password" required />
+                <button type="submit">Signup</button>
+            </form>
+            <span>or signup with</span>
+            <div class="socials">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-google-plus-g"></i>
+                <i class="fab fa-linkedin-in"></i>
+            </div>
+        </div>
+        <div class="form-control signin-form">
+            <form action="loginServlet" method="POST">
+                <h2>Signin</h2>
+                <input type="text" name="username" placeholder="Username" required />
+                <input type="password" name="password" placeholder="Password" required />
+                <button type="submit">Signin</button>
+            </form>
+            <span>or signin with</span>
+            <div class="socials">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-google-plus-g"></i>
+                <i class="fab fa-linkedin-in"></i>
+            </div>
+        </div>
+    </div>
+    <div class="intros-container">
+        <div class="intro-control signin-intro">
+            <div class="intro-control__inner">
+                <h2>Welcome back!</h2>
+                <p>It's great to see you again.</p>
+                <button id="signup-btn">No account yet? Signup.</button>
+            </div>
+        </div>
+        <div class="intro-control signup-intro">
+            <div class="intro-control__inner">
+                <h2>Come join us!</h2>
+                <p>Create an account for exclusive access.</p>
+                <button id="signin-btn">Already have an account? Signin.</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
